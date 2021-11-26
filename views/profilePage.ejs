@@ -1,0 +1,81 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            
+            <%- include("./partials/navbar") %>
+            <%- include("./partials/modal") %>
+            <div class="mainSectionContainer col-10 col-md-8 col-lg-6">
+                <div class="titleContainer">
+                    <h1><%=payload.user.firstName%></h1>
+                    </div>
+                <script>
+                    
+                    var profileUserId = '<%=payload.user._id%>'
+                    var profilePic = '<%=payload.user.profilePic%>'
+                    var coverPic = '<%=payload.user.coverPhoto%>'
+            
+                </script>    
+               
+                <div class="profileHeaderContainer">
+                    <div class="coverPhotoSection" >
+                        <div class="coverPhotoContainer" id="coverPhotoContainer">
+                            <img src="" alt="User Cover Photo" id="Cover">
+                           
+                        </div>
+                        <div class="userImageContainer" id="userImageContainer">
+                           
+                            <img src="/images/profilePic.jpeg" alt="User profile image" id="Profile">
+                            
+                        </div>
+                    </div>
+                    <div class="profileButtonsContainer"></div>
+                    <div class="userDetailsContainer">
+                        <span class="displayName"><%=payload.user.firstName%> <%=payload.user.lastName%></span>
+                        <span class="username">@<%=payload.user.username%></span>
+                        <span class="description"></span>
+   
+                        <button class="Fbtn" id="followButton"><span id="followText"></span></button> 
+                        <div class="followersContainer" >
+                            <a href="/profile/<%=payload.user.username%>/following"></a>
+                            <span class="value" id="followingValue"><%=payload.user.following.length%></span>
+                                <span>Following</span>
+                            </a>
+                            <a href="/profile/<%=payload.user.username%>/followers"></a>
+                            <span class="value" id="followersValue"><%=payload.user.followers.length%></span>
+                                <span>Followers</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="messagebtn">Message</div>
+                <div class="tabsContainer">
+                    <a class="tab active" href="/profile/<%=payload.user.username%>">
+                        <span>Posts</span>
+                    </a>
+                
+                </div>
+                <div class="pinnedPostContainer" style="display: none;"></div>
+                <div class="userPostsContainer">
+                    <!-- <span class="noResults">Nothing to show.</span> -->
+                </div>
+                   
+            </div>
+        </div>
+
+
+
+            <!-- <div class="d-none d-md-block col-md-2 col-lg-4">Third Column</div> -->
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/jQuery.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/profile.js"></script>
+
+<%- include("partials/footer") %>

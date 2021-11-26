@@ -1,0 +1,376 @@
+:root{
+  --twitter-dark:#212121;
+  --twitter-blue:#1DA1F2;
+  --twitter-btn-hover:#d4edff;
+  --twitter-light-gray: #3d3d3d;
+  --twitter-spacing: 15px;
+  --twitter-heading: #E4E6EB;
+}
+body{
+  background-color: var(--twitter-dark);
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  align-items: flex end;
+  background-color: var(--twitter-light-gray);
+}
+nav a{
+  display: block;
+  padding: 10px;
+  font-size: 30px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color:var(--twitter-blue);
+}
+nav a:hover{
+  background-color: var(--twitter-btn-hover);
+  border-radius: 50%;
+}
+.main-container{
+  border-left: 2px solid #b3b3b3;
+  border-right: 1px solid #b3b3b3;
+  display: flex;
+  flex-direction: column;
+}
+.titleContainer{
+  height:53px;
+  padding: 0 var(--twitter-spacing);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--twitter-light-gray);
+  flex-shrink: 0;
+}
+.titleContainer h1{
+  flex: 1;
+}
+h1{
+  font-size: 25px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--twitter-heading);
+}
+.postContainer {
+display: flex;
+padding: var(--spacing);
+border-bottom: 10px solid var(--twitter-dark);
+flex-shrink: 0;
+background-color: var(--twitter-light-gray);
+}
+
+.userImageContainer {
+width: 50px;
+height: 50px;
+
+}
+
+.userImageContainer img {
+width: 100%;
+border-radius: 50%;
+
+}
+
+.textareaContainer {
+flex: 1;
+padding-left: var(--spacing);
+
+}
+
+.textareaContainer textarea {
+width: 100%;
+border: none;
+resize: none;
+font-size: 19px;
+}
+
+textarea:focus {
+outline: none;
+}
+
+#submitPostButton {
+background-color: var(--twitter-blue);
+color: white;
+border: none;
+border-radius: 40px;
+padding: 7px 15px;
+}
+.post{
+background-color: var(--twitter-light-gray);
+margin: 5px 0px;
+}
+.mainContentContainer {
+flex: 1;
+display: flex;
+
+}
+
+.postContentContainer {
+padding-left: var(--spacing);
+display: flex;
+flex-direction: column;
+flex: 1;
+}
+
+.username,
+.date {
+color: var(--twitter-blue);
+}
+
+.displayName {
+font-weight: bold;
+}
+.postBody{
+color: var(--twitter-heading);
+}
+.postFooter {
+display: flex;
+align-items: center;
+}
+
+.postFooter .postButtonContainer {
+flex: 1;
+display: flex;
+}
+
+.postFooter .postButtonContainer button {
+padding: 3px 20px;
+background-color: var(--twitter-blue);
+color: var(--twitter-heading);
+outline: none;
+border-radius: 15%;
+outline: none;
+border:none;
+}
+.postFooter .postButtonContainer button i,
+.postFooter .postButtonContainer button span{
+  pointer-events: none;
+}
+.coverPhotoContainer {
+height: 180px;
+background-color: var(--twitter-light-gray);
+position: relative;
+}
+.profileHeaderContainer .userImageContainer  {
+width: 132px;
+height: 132px;
+margin-left: var(--spacing);
+position: absolute;
+top: 150px;
+
+}
+
+.profileHeaderContainer .userImageContainer img {
+border: 4px solid #fff;
+}
+
+.profileHeaderContainer .profileButtonsContainer {
+text-align: right;
+padding: var(--spacing);
+min-height: 66px;
+}
+
+.profileButton,
+.followButton {
+border: 1px solid var(--twitter-heading);
+color: var(--blue);
+font-weight: bold;
+padding: 5px 15px;
+border-radius: 60px;
+display: inline-block;
+margin-left: var(--spacing);
+}
+
+.profileButton:hover,
+.followButton:hover {
+background-color: var(--twitter-blue);
+}
+
+.followButton.following {
+background-color: var(--twitter-blue);
+color: #fff;
+}
+
+.profileHeaderContainer .userDetailsContainer {
+display: flex;
+flex-direction: column;
+padding: 0 var(--spacing);
+color: var(--twitter-heading);
+margin-top:3%;
+}
+
+.followersContainer .value {
+font-weight: bold;
+margin-right: 5px;
+}
+
+.followersContainer span:not(.value) {
+color: var(--greyText);
+pointer-events: none;
+}
+
+.followersContainer a {
+margin-right: 15px;
+pointer-events: none;
+}
+
+.followersContainer a:hover {
+border-bottom: 1px var(--twitter-heading);
+}
+
+.tabsContainer {
+display: flex;
+border-bottom: 1px solid var(--twitter-heading);
+flex-shrink: 0;
+}
+
+.tab {
+flex: 1;
+height: 52px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--twitter-heading);
+font-weight: bold;
+}
+
+.tab.active {
+color: var(--twitter-heading);
+border-bottom: 2px solid var(--blue);
+}
+
+.tab:hover {
+color: var(--twitter-blue);
+background-color: var(--twitter-light-gray);
+}
+
+#msg-text:focus {
+outline: none;
+}
+
+#send-msg-btn {
+border: none;
+background: none;
+background-color: var(--blue);
+color: var(--lightGrey);
+padding: 5px 10px;
+border-radius: 20px;
+}
+
+#all-msg-container {
+list-style: none;
+}
+
+#msg-text:focus {
+outline: none;
+}
+
+#send-msg-btn {
+border: none;
+background: none;
+background-color: var(--twitter-blue);
+color: var(--twitter-dark);
+padding: 5px 10px;
+border-radius: 20px;
+}
+#all-msg-container  li{
+  background-color: var(--twitter-light-gray);
+  list-style: none;
+  color:var(--twitter-heading);
+  margin-top: 5px;
+  
+}
+#all-msg-container span{
+  color: var(--twitter-blue);
+}
+#Fbtn{
+  background-color: var(--twitter-blue);
+  color: var(--twitter-heading);
+}
+.Fbtn{
+  background-color: var(--twitter-blue);
+  color: var(--twitter-heading);
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.header {
+  display:flex;
+}
+.header .date {
+  flex:1;
+}
+
+.delicon{
+  background-color: var(--twitter-light-gray);
+  border: none; 
+  color: var(--twitter-blue);
+  
+  font-size: 16px; 
+  
+}
+.deltext
+{
+  padding: 4%;
+  background-color: var(--twitter-dark);
+  color: var(--twitter-heading);
+}
+.messagebtn
+{
+  color:var(--twitter-heading);
+  background-color: var(--twitter-blue);
+  width:20%;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.check{
+  background-color: red;
+}
+.choosefile{
+  padding: 5%;
+  background-color: var(--twitter-dark);
+}
+.imageUploadButton{
+  border: none;
+  outline: none;
+  background-color:transparent;
+  position:absolute;
+ top:60%;
+ left:40%;
+ padding: 0%;
+ margin: 0%;
+ border: 50px;
+ font-size: 20px;
+}
+#imagePreviewContainer {
+  width:100%;
+  display: block;
+
+  /* This rule is very important, please don't ignore this */
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+.coverUploadButton{
+  border: none;
+  outline: none;
+  background-color:transparent;
+  position:absolute;
+ top:20%;
+ left:44%;
+ padding: 0%;
+ margin: 0%;
+ border: 50px;
+ font-size: 20px;
+}
+.coverPhotoContainer img{
+  width: 100%;
+  height:100%;
+}

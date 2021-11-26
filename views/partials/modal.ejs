@@ -1,0 +1,131 @@
+<!-- Button trigger modal -->
+<div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content" >
+      <div class="modal-header"  style="background-color:var(--twitter-dark);">
+        <h5 class="modal-title" id="replyModalLabel" style="color: var(--twitter-heading);">Reply</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="background-color: var(--twitter-heading);"
+        ></button>
+      </div>
+      <div class="modal-body"  style="background-color:var(--twitter-dark);">
+        <div id="originalPostContainer"></div>
+        <div class="mb-3 postContainer" >
+          <div class="userImageContainer">
+            <img src="/images/profilePic.jpeg" alt="User Profile" />
+          </div>
+
+          <div class="textareaContainer">
+            <textarea
+              id="reply-text-container"
+              name=""
+              id=""
+              cols="30"
+              rows="3"
+              placeholder="What's happening?"
+              style="background-color:var(--twitter-heading)"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"  style="background-color: var(--twitter-dark);">
+        <button  class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button id="submitReplyButton" class="btn btn-primary">Reply</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="delModalLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content" >
+      <div class="modal-header"  style="background-color:var(--twitter-dark);">
+        <h5 class="modal-title" id="delModalLabel" style="color: var(--twitter-heading);">Confirm</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="background-color: var(--twitter-heading);"
+        ></button>
+ 
+    
+      
+       
+      </div>
+      <div class="deltext">Are sure to delete this Tweet?</div>
+      <div class="modal-footer"  style="background-color: var(--twitter-dark);">
+        <button  class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button id="delButton" class="btn btn-primary">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="picModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content" >
+      <div class="modal-header"  style="background-color:var(--twitter-dark);">
+        <h5 class="modal-title" style="color: var(--twitter-heading);">Upload Profile Pic</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="background-color: var(--twitter-heading);"
+        ></button>
+ 
+    
+      
+       
+      </div>
+      <div>
+        <input type="file" name="filePhoto" class="file" id="filePhoto">
+        <img id="imagePreviewContainer" src="">
+      </div>
+   
+    
+      <div class="modal-footer"  style="background-color: var(--twitter-dark);">
+        <button  class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="imgUploadButton" class="btn btn-primary">Upload</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="coverModal" tabindex="-1" aria-labelledby="coverModalLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content" >
+      <div class="modal-header"  style="background-color:var(--twitter-dark);">
+        <h5 class="modal-title" style="color: var(--twitter-heading);">Upload cover Pic</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="background-color: var(--twitter-heading);"
+        ></button>
+ 
+    
+      
+       
+      </div>
+      <div>
+        <input type="file" name="coverPhoto" class="file" id="coverPhoto">
+        <img id="coverPreviewContainer" src="">
+      </div>
+   
+    
+      <div class="modal-footer"  style="background-color: var(--twitter-dark);">
+        <button  class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="coverUploadButton" class="btn btn-primary">Upload</button>
+      </div>
+    </div>
+  </div>
+</div>
