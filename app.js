@@ -16,7 +16,7 @@ const Chat = require('./models/chat')
 const multer = require('multer')
 const port = process.env.PORT || 5000;
 mongoose
-  .connect("mongodb://localhost:27017/twitter-clone", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/twitter-clone", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
